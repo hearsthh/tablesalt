@@ -1,0 +1,217 @@
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight, Play, Check, Sparkles } from "lucide-react"
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">TableSalt</h1>
+          <p className="text-xl text-gray-600 mb-8">Essential AI Marketing for Restaurants</p>
+          <Link href="/dashboard">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3">Get Started</Button>
+          </Link>
+        </div>
+      </div>
+
+      {/* Mobile-First Header */}
+      <header className="border-b border-gray-200/60 bg-white/90 backdrop-blur-xl sticky top-0 z-50">
+        <div className="px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg flex items-center justify-center shadow-lg">
+              <div className="w-5 h-5 bg-white rounded-sm flex items-center justify-center">
+                <div className="w-1.5 h-1.5 bg-gray-800 rounded-full"></div>
+              </div>
+            </div>
+            <div>
+              <h1 className="text-lg font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                TableSalt
+              </h1>
+              <p className="text-xs text-gray-600 hidden sm:block">Essential AI</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Link href="/signin" className="text-gray-700 hover:text-gray-900 font-medium text-sm hidden sm:block">
+              Sign In
+            </Link>
+            <Link href="/dashboard">
+              <Button
+                size="sm"
+                className="bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black text-white shadow-lg"
+              >
+                <span className="hidden sm:inline">Get Started</span>
+                <span className="sm:hidden">Start</span>
+                <ArrowRight className="ml-1 h-3 w-3" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile-First Hero Section */}
+      <section className="py-12 px-4 sm:py-24 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <Badge className="mb-4 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 border-gray-300 text-xs">
+            <Sparkles className="mr-1 h-3 w-3" />
+            Essential for every table
+          </Badge>
+
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+              The Essential
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
+              Marketing Ingredient
+            </span>
+          </h1>
+
+          <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed px-2">
+            Just like salt is essential on every table, TableSalt is essential for every restaurant's success. The one
+            AI marketing ingredient you absolutely can't do without.
+          </p>
+
+          <div className="flex flex-col gap-3 items-center mb-12 px-4">
+            <Link href="/dashboard" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black text-white shadow-xl hover:shadow-2xl transition-all duration-300 px-6 py-3 text-base sm:text-lg"
+              >
+                Add TableSalt to Your Restaurant
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto border-gray-300 hover:bg-gray-50 px-6 py-3 text-base sm:text-lg"
+            >
+              <Play className="mr-2 h-4 w-4" />
+              See the Transformation
+            </Button>
+          </div>
+
+          {/* Mobile-Optimized Social Proof */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-gray-500 text-sm">
+            <div className="flex items-center">
+              <Check className="h-4 w-4 text-amber-500 mr-2" />
+              Essential Daily
+            </div>
+            <div className="flex items-center">
+              <Check className="h-4 w-4 text-amber-500 mr-2" />
+              Universal Appeal
+            </div>
+            <div className="flex items-center">
+              <Check className="h-4 w-4 text-amber-500 mr-2" />
+              Transformative Results
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile-First Features Grid */}
+      <section className="py-12 sm:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="px-4 sm:px-6 max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              Essential Ingredients for Success
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+              Every feature designed to be as essential as salt on your table
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: "🧂",
+                title: "TableSalt Pages",
+                description: "Essential restaurant pages that showcase everything your customers need to know",
+                gradient: "from-gray-600 to-gray-800",
+              },
+              {
+                icon: "📱",
+                title: "TableSalt Posts",
+                description: "Daily social content that's as essential as salt - simple, effective, transformative",
+                gradient: "from-blue-500 to-cyan-500",
+              },
+              {
+                icon: "📅",
+                title: "TableSalt Planner",
+                description: "Content scheduling that ensures you never miss the essential posting moments",
+                gradient: "from-purple-500 to-violet-500",
+              },
+              {
+                icon: "📊",
+                title: "TableSalt Pulse",
+                description: "Pure, unfiltered customer insights - no fluff, just essential data",
+                gradient: "from-emerald-500 to-teal-500",
+              },
+              {
+                icon: "🎯",
+                title: "TableSalt Promotions",
+                description: "Campaigns that hit the sweet spot - essential offers your customers actually want",
+                gradient: "from-orange-500 to-red-500",
+              },
+              {
+                icon: "⚡",
+                title: "Essential Growth",
+                description: "Fundamental growth strategies that work - no gimmicks, just essential results",
+                gradient: "from-amber-500 to-yellow-500",
+              },
+            ].map((feature, index) => (
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:-translate-y-1"
+              >
+                <CardHeader className="p-6">
+                  <div
+                    className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  >
+                    <span className="text-xl sm:text-2xl">{feature.icon}</span>
+                  </div>
+                  <CardTitle className="text-lg sm:text-xl mb-2 text-gray-900">{feature.title}</CardTitle>
+                  <CardDescription className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                    {feature.description}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile-First CTA Section */}
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10"></div>
+        <div className="px-4 sm:px-6 text-center relative z-10 max-w-4xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Ready to Add TableSalt?</h2>
+          <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto">
+            Join restaurants that have discovered the essential ingredient for marketing success
+          </p>
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center px-4">
+            <Link href="/dashboard" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-white text-gray-900 hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 px-6 py-3 text-base sm:text-lg font-semibold"
+              >
+                Get Your Essential Ingredient
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto border-gray-400 text-gray-300 hover:bg-gray-800 px-6 py-3 text-base sm:text-lg"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
